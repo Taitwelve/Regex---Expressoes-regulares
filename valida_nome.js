@@ -1,6 +1,6 @@
 export default function ehUmNome(campo) {
     const nome = campo.value
-    const patternNome = /^[A-Za-zÀ-ÿ -]{3,30}$/i.test(nome)
+    const patternNome = /^(?!(.)\1\1)[A-Za-zÀ-ÿ -]{3,30}$/i.test(nome)
     console.log(patternNome);
 
     if (!patternNome) {
